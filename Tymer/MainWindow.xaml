@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tymer"
         mc:Ignorable="d"
-        Title="Tymer" Height="250" Width="394" Loaded="MainWindow_Loaded">
+        Title="Tymer" Height="250" Width="394" Loaded="MainWindow_Loaded" Topmost="True">
     <Grid>
         <ListView x:Name="timesListView" Margin="0,0,0,35" SelectionMode="Single" Foreground="Black" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" BorderThickness="0" KeyUp="timesListView_KeyDown">
             <ListView.View>
