@@ -149,10 +149,15 @@ namespace Tymer
                         workerTimer.ReportProgress(percent);
                         Thread.Sleep(50);
                     }
-                    System.Media.SystemSounds.Beep.Play();
-                    if (timeslot.Alert == true && !workerTimer.CancellationPending)
+
+                    // end of timer
+                    if (!workerTimer.CancellationPending)
                     {
-                        MessageBox.Show("Timer \"" + timeslot.Name + "\" has finished.", "Tymer", MessageBoxButton.OK);
+                        System.Media.SystemSounds.Beep.Play();
+                        if (timeslot.Alert == true)
+                        {
+                            MessageBox.Show("Timer \"" + timeslot.Name + "\" has finished.", "Tymer", MessageBoxButton.OK);
+                        }
                     }
                 }
             }
